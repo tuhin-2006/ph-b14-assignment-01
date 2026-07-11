@@ -51,8 +51,8 @@ ul {
 ul li {
   text-decoration: none;
   color: #575757;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 .banner {

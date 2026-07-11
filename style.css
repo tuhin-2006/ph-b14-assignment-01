@@ -193,3 +193,28 @@ ul li {
 .plan {
   color: rgb(150, 143, 143);
 }
+
+/* footer design */
+.footer {
+  background-color: #737885;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.left-foot {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.left-foot img {
+  width: 95px;
+  margin: 20px;
+}
+.tth {
+  height: 35px;
+  margin: 20px;
+  width: 35px;
+  color: white;
+}

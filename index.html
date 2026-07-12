@@ -8,9 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./aistyle.css" />
   </head>
   <body>
     <!-- Nav Bar Start  -->
@@ -51,36 +61,36 @@
     <section class="speaker-parent container">
       <div class="meet-speaker"><h1>Meet The Speakers</h1></div>
       <div class="speaker-card">
-        <div>
+        <div class="cnn1">
           <img src="./assets/andrej.png" alt="andrej" />
           <div class="text-item">
-            <p>AI / ML</p>
+            <p class="passion">AI / ML</p>
             <h3>Andrej Karpathy</h3>
-            <p1>Pretraining team, Anthropic</p1>
+            <p class="role1">Pretraining team, Anthropic</p1>
           </div>
         </div>
-        <div>
+        <div class="cnn1">
           <img src="./assets/demis.png" alt="demis" />
           <div class="text-item">
-            <p>CLOUD & DEVOPS</p>
+            <p class="passion">CLOUD & DEVOPS</p>
             <h3>Demis Hassabis</h3>
-            <p1>Co-Founder and CEO, Google DeepMind</p1>
+            <p class="role1">Co-Founder and CEO, Google DeepMind</p1>
           </div>
         </div>
-        <div>
+        <div class="cnn1">
           <img src="./assets/gary.png" alt="gary" />
           <div class="text-item">
-            <p>FRONTEND</p>
+            <p class="passion">FRONTEND</p>
             <h3>Gary Marcus</h3>
-            <p1>Staff Engineer, Vercel</p1>
+            <p class="role1">Staff Engineer, Vercel</p1>
           </div>
         </div>
-        <div>
+        <div class="cnn1">
           <img src="./assets/mustafa.png" alt="mustafa" />
           <div class="text-item">
-            <p>SECURITY</p>
+            <p class="passion">SECURITY</p>
             <h3>Mustafa Suleyman</h3>
-            <p1>CEO of Microsoft AI</p1>
+            <p class="role1">CEO of Microsoft AI</p1>
           </div>
         </div>
       </div>
@@ -93,7 +103,7 @@
         <p>Early-bird pricing ends August 15, 2026.</p>
       </div>
       <div class="pricing-card">
-        <div class="card">
+        <div class="plan-card">
           <p class="plan">Standard</p>
           <br />
           <h2>$399</h2>
@@ -109,9 +119,9 @@
             <li>Digital recordings (30 days)</li>
           </ul>
           <br /><br />
-          <button style="width: 340px" class="outline-btn">Get Standard</button>
+          <button style="width: 295px" class="outline-btn">Get Standard</button>
         </div>
-        <div class="card pro">
+        <div class="plan-card pro1">
           <p class="plan2">Pro</p>
           <br />
           <h2>$749</h2>
@@ -127,9 +137,9 @@
             <li>1-on-1 mentorship (30 min)</li>
           </ul>
           <br /><br />
-          <button style="width: 340px" class="common-btn">Get Pro</button>
+          <button style="width: 295px" class="common-btn">Get Pro</button>
         </div>
-        <div class="card">
+        <div class="plan-card">
           <p class="plan">Team</p>
           <br />
           <h2>$5,999</h2>
@@ -145,13 +155,593 @@
             <li>Priority customer support</li>
           </ul>
           <br /><br />
-          <button style="width: 340px" class="outline-btn">Contact Us</button>
+          <button style="width: 295px" class="outline-btn">Contact Us</button>
         </div>
       </div>
     </section>
     <!-- End Takar khala  -->
     <!-- Ai  -->
 
+    <section class="djb-scope">
+      <div class="djb-inner">
+        <div class="djb-section-head">
+          <span class="djb-eyebrow">Session Planner</span>
+          <h2 class="djb-title">Build Your Dev Journey</h2>
+          <p class="djb-sub">
+            Answer three quick questions and we'll put together a personal track
+            — sessions, speakers, and the pass that fits how you're attending.
+          </p>
+        </div>
+
+        <div class="djb-step-rail" id="djbStepRail">
+          <div class="djb-step-node" data-step="1">
+            <span class="djb-idx">1</span
+            ><span class="djb-label">Interest</span>
+          </div>
+          <div class="djb-step-line" id="djbLine1"></div>
+          <div class="djb-step-node" data-step="2">
+            <span class="djb-idx">2</span><span class="djb-label">Level</span>
+          </div>
+          <div class="djb-step-line" id="djbLine2"></div>
+          <div class="djb-step-node" data-step="3">
+            <span class="djb-idx">3</span
+            ><span class="djb-label">Duration</span>
+          </div>
+          <div class="djb-step-line" id="djbLine3"></div>
+          <div class="djb-step-node" data-step="4">
+            <span class="djb-idx">4</span
+            ><span class="djb-label">Schedule</span>
+          </div>
+        </div>
+
+        <div class="djb-picker-group">
+          <span class="djb-picker-label">01 / What are you building?</span>
+          <div class="djb-option-grid" id="djbInterestGrid">
+            <div class="djb-surface-card djb-option-card" data-value="frontend">
+              <span class="djb-icon">◧</span>
+              <div class="djb-name">Frontend</div>
+              <div class="djb-desc">UI, design systems</div>
+            </div>
+            <div class="djb-surface-card djb-option-card" data-value="backend">
+              <span class="djb-icon">◨</span>
+              <div class="djb-name">Backend</div>
+              <div class="djb-desc">APIs, infra logic</div>
+            </div>
+            <div class="djb-surface-card djb-option-card" data-value="ai">
+              <span class="djb-icon">◈</span>
+              <div class="djb-name">AI</div>
+              <div class="djb-desc">Models, agents</div>
+            </div>
+            <div class="djb-surface-card djb-option-card" data-value="devops">
+              <span class="djb-icon">◫</span>
+              <div class="djb-name">DevOps</div>
+              <div class="djb-desc">CI/CD, platform</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="djb-picker-group">
+          <span class="djb-picker-label">02 / Where are you at?</span>
+          <div class="djb-option-grid djb-cols-3" id="djbLevelGrid">
+            <div class="djb-surface-card djb-option-card" data-value="beginner">
+              <span class="djb-icon">◔</span>
+              <div class="djb-name">Beginner</div>
+              <div class="djb-desc">0–1 yrs</div>
+            </div>
+            <div
+              class="djb-surface-card djb-option-card"
+              data-value="intermediate"
+            >
+              <span class="djb-icon">◑</span>
+              <div class="djb-name">Intermediate</div>
+              <div class="djb-desc">1–4 yrs</div>
+            </div>
+            <div class="djb-surface-card djb-option-card" data-value="advanced">
+              <span class="djb-icon">●</span>
+              <div class="djb-name">Advanced</div>
+              <div class="djb-desc">5+ yrs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="djb-picker-group">
+          <span class="djb-picker-label">03 / How long are you in?</span>
+          <div class="djb-option-grid djb-cols-3" id="djbDurationGrid">
+            <div class="djb-surface-card djb-option-card" data-value="1day">
+              <span class="djb-icon">◷</span>
+              <div class="djb-name">1 Day</div>
+              <div class="djb-desc">Single pass</div>
+            </div>
+            <div class="djb-surface-card djb-option-card" data-value="2day">
+              <span class="djb-icon">◶</span>
+              <div class="djb-name">2 Days</div>
+              <div class="djb-desc">Weekend</div>
+            </div>
+            <div class="djb-surface-card djb-option-card" data-value="3day">
+              <span class="djb-icon">◵</span>
+              <div class="djb-name">Full 3 Days</div>
+              <div class="djb-desc">Whole event</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="djb-generate-wrap">
+          <button class="djb-generate-btn" id="djbGenBtn" disabled>
+            <span id="djbGenBtnText">Generate My Schedule</span>
+          </button>
+        </div>
+
+        <div class="djb-results-wrap" id="djbResultsWrap">
+          <div
+            class="d-flex justify-content-between align-items-end flex-wrap gap-2"
+          >
+            <div>
+              <div class="djb-results-heading">Your track is ready.</div>
+              <div class="djb-results-sub" id="djbResultsSummary"></div>
+            </div>
+            <span class="djb-track-tag" id="djbTrackTag"></span>
+          </div>
+
+          <div class="row g-3 mt-1" id="djbSessionRow"></div>
+
+          <div class="djb-results-heading mt-5">
+            Speakers you'll want on your list
+          </div>
+          <div class="row g-3 mt-1" id="djbSpeakerRow"></div>
+
+          <div class="djb-results-heading mt-5">Your recommended pass</div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-md-6 col-lg-5">
+              <div
+                class="djb-surface-card djb-ticket-card"
+                id="djbTicketCard"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const state = { interest: null, level: null, duration: null };
+        const grids = {
+          interest: document.getElementById("djbInterestGrid"),
+          level: document.getElementById("djbLevelGrid"),
+          duration: document.getElementById("djbDurationGrid"),
+        };
+        const stepNodes = document.querySelectorAll(
+          "#djbStepRail .djb-step-node",
+        );
+        const lines = {
+          interest: document.getElementById("djbLine1"),
+          level: document.getElementById("djbLine2"),
+          duration: document.getElementById("djbLine3"),
+        };
+
+        function selectOption(grid, key, el) {
+          [...grid.children].forEach((c) => c.classList.remove("djb-selected"));
+          el.classList.add("djb-selected");
+          state[key] = el.dataset.value;
+          updateRail();
+          updateButton();
+        }
+        Object.entries(grids).forEach(([key, grid]) => {
+          grid.addEventListener("click", (e) => {
+            const card = e.target.closest(".djb-option-card");
+            if (!card) return;
+            selectOption(grid, key, card);
+          });
+        });
+
+        function updateRail() {
+          stepNodes[0].classList.toggle("djb-active", !!state.interest);
+          stepNodes[1].classList.toggle("djb-active", !!state.level);
+          stepNodes[2].classList.toggle("djb-active", !!state.duration);
+          lines.interest.classList.toggle("djb-filled", !!state.interest);
+          lines.level.classList.toggle("djb-filled", !!state.level);
+          lines.duration.classList.toggle("djb-filled", !!state.duration);
+        }
+
+        const genBtnText = document.getElementById("djbGenBtnText");
+        const genBtnEl = document.getElementById("djbGenBtn");
+        function updateButton() {
+          genBtnEl.disabled = !(
+            state.interest &&
+            state.level &&
+            state.duration
+          );
+        }
+
+        const TRACK_LABEL = {
+          frontend: "Frontend",
+          backend: "Backend",
+          ai: "AI",
+          devops: "DevOps",
+        };
+
+        const SESSIONS = {
+          frontend: {
+            beginner: [
+              {
+                title: "HTML/CSS Foundations for 2026",
+                track: "Web Basics",
+                time: "Day 1 · 09:30",
+                room: "Hall A",
+              },
+              {
+                title: "JavaScript You Actually Need",
+                track: "Fundamentals",
+                time: "Day 1 · 11:00",
+                room: "Hall A",
+              },
+              {
+                title: "Your First Component Library",
+                track: "UI",
+                time: "Day 2 · 10:00",
+                room: "Studio 2",
+              },
+            ],
+            intermediate: [
+              {
+                title: "React Server Components in Practice",
+                track: "React",
+                time: "Day 1 · 10:30",
+                room: "Hall B",
+              },
+              {
+                title: "Design Systems That Scale",
+                track: "UI Architecture",
+                time: "Day 1 · 14:00",
+                room: "Studio 1",
+              },
+              {
+                title: "Taming State: Signals vs Stores",
+                track: "State Mgmt",
+                time: "Day 2 · 11:30",
+                room: "Hall B",
+              },
+            ],
+            advanced: [
+              {
+                title: "Rendering at the Edge: RSC + Streaming",
+                track: "Performance",
+                time: "Day 1 · 13:00",
+                room: "Main Stage",
+              },
+              {
+                title: "Building a Framework From Scratch",
+                track: "Deep Dive",
+                time: "Day 2 · 09:00",
+                room: "Hall B",
+              },
+              {
+                title: "WASM in the Browser: Real Workloads",
+                track: "Systems",
+                time: "Day 3 · 10:00",
+                room: "Studio 1",
+              },
+            ],
+          },
+          backend: {
+            beginner: [
+              {
+                title: "REST APIs Done Right",
+                track: "API Design",
+                time: "Day 1 · 09:30",
+                room: "Hall C",
+              },
+              {
+                title: "Databases 101: Choosing Wisely",
+                track: "Data",
+                time: "Day 1 · 11:00",
+                room: "Hall C",
+              },
+              {
+                title: "Your First Production Server",
+                track: "Fundamentals",
+                time: "Day 2 · 10:00",
+                room: "Studio 3",
+              },
+            ],
+            intermediate: [
+              {
+                title: "Event-Driven Architectures in Practice",
+                track: "Architecture",
+                time: "Day 1 · 13:30",
+                room: "Hall C",
+              },
+              {
+                title: "GraphQL at Scale",
+                track: "API Design",
+                time: "Day 2 · 11:00",
+                room: "Studio 3",
+              },
+              {
+                title: "Caching Strategies That Don\u2019t Break Prod",
+                track: "Performance",
+                time: "Day 2 · 14:30",
+                room: "Hall C",
+              },
+            ],
+            advanced: [
+              {
+                title: "Distributed Systems: Consensus in the Wild",
+                track: "Systems",
+                time: "Day 1 · 10:00",
+                room: "Main Stage",
+              },
+              {
+                title: "Scaling to a Billion Requests",
+                track: "Scalability",
+                time: "Day 2 · 09:30",
+                room: "Hall C",
+              },
+              {
+                title: "Zero-Downtime Migrations at Scale",
+                track: "Data",
+                time: "Day 3 · 11:00",
+                room: "Studio 3",
+              },
+            ],
+          },
+          ai: {
+            beginner: [
+              {
+                title: "LLMs Explained Without the Hype",
+                track: "Foundations",
+                time: "Day 1 · 09:30",
+                room: "Hall D",
+              },
+              {
+                title: "Your First AI-Powered App",
+                track: "Applied AI",
+                time: "Day 1 · 11:30",
+                room: "Studio 4",
+              },
+              {
+                title: "Prompting as a Craft",
+                track: "Fundamentals",
+                time: "Day 2 · 10:00",
+                room: "Hall D",
+              },
+            ],
+            intermediate: [
+              {
+                title: "Building Reliable AI Agents",
+                track: "Agents",
+                time: "Day 1 · 13:00",
+                room: "Main Stage",
+              },
+              {
+                title: "RAG Pipelines That Actually Work",
+                track: "Applied AI",
+                time: "Day 2 · 11:00",
+                room: "Hall D",
+              },
+              {
+                title: "Evaluating Model Outputs at Scale",
+                track: "Eval",
+                time: "Day 2 · 14:00",
+                room: "Studio 4",
+              },
+            ],
+            advanced: [
+              {
+                title: "Fine-Tuning vs Retrieval: A Field Guide",
+                track: "Research",
+                time: "Day 1 · 10:30",
+                room: "Main Stage",
+              },
+              {
+                title: "Multi-Agent Systems in Production",
+                track: "Agents",
+                time: "Day 2 · 09:00",
+                room: "Hall D",
+              },
+              {
+                title: "Interpretability: Looking Inside the Model",
+                track: "Research",
+                time: "Day 3 · 10:30",
+                room: "Studio 4",
+              },
+            ],
+          },
+          devops: {
+            beginner: [
+              {
+                title: "CI/CD Pipelines from Zero",
+                track: "Automation",
+                time: "Day 1 · 09:30",
+                room: "Hall E",
+              },
+              {
+                title: "Docker for Everyday Developers",
+                track: "Containers",
+                time: "Day 1 · 11:00",
+                room: "Studio 5",
+              },
+              {
+                title: "Reading Your First Dashboard",
+                track: "Observability",
+                time: "Day 2 · 10:00",
+                room: "Hall E",
+              },
+            ],
+            intermediate: [
+              {
+                title: "Kubernetes Without the Fear",
+                track: "Orchestration",
+                time: "Day 1 · 13:30",
+                room: "Hall E",
+              },
+              {
+                title: "Infrastructure as Code, Properly",
+                track: "IaC",
+                time: "Day 2 · 11:00",
+                room: "Studio 5",
+              },
+              {
+                title: "Incident Response Playbooks",
+                track: "Reliability",
+                time: "Day 2 · 14:00",
+                room: "Hall E",
+              },
+            ],
+            advanced: [
+              {
+                title: "Platform Engineering at Scale",
+                track: "Architecture",
+                time: "Day 1 · 10:00",
+                room: "Main Stage",
+              },
+              {
+                title: "Chaos Engineering in Production",
+                track: "Reliability",
+                time: "Day 2 · 09:30",
+                room: "Hall E",
+              },
+              {
+                title: "Multi-Cloud Cost & Control",
+                track: "FinOps",
+                time: "Day 3 · 11:00",
+                room: "Studio 5",
+              },
+            ],
+          },
+        };
+
+        const SPEAKERS = {
+          frontend: [
+            { name: "Maren Ilic", role: "Staff Engineer, Vercel" },
+            { name: "Kojo Boateng", role: "Design Systems Lead, Shopify" },
+            { name: "Priya Nandan", role: "Principal Eng, Stripe" },
+          ],
+          backend: [
+            { name: "Dario Faust", role: "Distinguished Eng, Netflix" },
+            { name: "Wren Okafor", role: "Staff SWE, Cloudflare" },
+            { name: "Lena Sørensen", role: "VP Engineering, Datadog" },
+          ],
+          ai: [
+            { name: "Ravi Chandran", role: "Research Engineer, Mistral" },
+            { name: "Aiko Tanaka", role: "ML Lead, Hugging Face" },
+            { name: "Noah Feldman", role: "Applied AI Lead, Notion" },
+          ],
+          devops: [
+            { name: "Greta Lindqvist", role: "Principal SRE, HashiCorp" },
+            { name: "Tobias Adeyemi", role: "Platform Lead, GitHub" },
+            { name: "Chidi Okonkwo", role: "DevOps Architect, Datadog" },
+          ],
+        };
+
+        const TICKETS = {
+          "1day": {
+            name: "Day Pass",
+            price: 399,
+            badge: "Great for a taste",
+            feats: [
+              "Access to 1 selected day",
+              "All main-stage talks",
+              "Expo hall access",
+              "Digital session recordings (30 days)",
+            ],
+          },
+          "2day": {
+            name: "Weekend Pass",
+            price: 749,
+            badge: "Most flexible",
+            feats: [
+              "Access to any 2 days",
+              "All main-stage + studio talks",
+              "Expo hall + workshops",
+              "Digital session recordings (90 days)",
+              "Conference swag pack",
+            ],
+          },
+          "3day": {
+            name: "All-Access Pass",
+            price: 5999,
+            badge: "Most popular",
+            feats: [
+              "Full 3-day access",
+              "Every talk, workshop & studio session",
+              "Speaker dinner invite",
+              "Lifetime session recordings",
+              "Conference swag pack + hoodie",
+            ],
+          },
+        };
+
+        function initials(name) {
+          return name
+            .split(" ")
+            .map((w) => w[0])
+            .join("")
+            .slice(0, 2);
+        }
+
+        function render() {
+          const { interest, level, duration } = state;
+          document.getElementById("djbTrackTag").textContent =
+            TRACK_LABEL[interest] + " Track";
+          document.getElementById("djbResultsSummary").textContent =
+            `Curated for a ${level} ${TRACK_LABEL[interest].toLowerCase()} developer attending ${TICKETS[duration].name.toLowerCase()}.`;
+
+          const sessionRow = document.getElementById("djbSessionRow");
+          sessionRow.innerHTML = "";
+          SESSIONS[interest][level].forEach((s) => {
+            const col = document.createElement("div");
+            col.className = "col-md-4";
+            col.innerHTML = `
+        <div class="djb-surface-card djb-session-card">
+          <span class="djb-track-tag">${s.track}</span>
+          <div class="djb-session-title">${s.title}</div>
+          <div class="djb-session-meta"><span>🕒 ${s.time}</span><span>📍 ${s.room}</span></div>
+        </div>`;
+            sessionRow.appendChild(col);
+          });
+
+          const speakerRow = document.getElementById("djbSpeakerRow");
+          speakerRow.innerHTML = "";
+          SPEAKERS[interest].forEach((sp) => {
+            const col = document.createElement("div");
+            col.className = "col-md-4";
+            col.innerHTML = `
+        <div class="djb-surface-card djb-speaker-card">
+          <div class="djb-speaker-avatar">${initials(sp.name)}</div>
+          <div class="djb-speaker-info"><div class="djb-speaker-name">${sp.name}</div><div class="djb-speaker-role">${sp.role}</div></div>
+        </div>`;
+            speakerRow.appendChild(col);
+          });
+
+          const t = TICKETS[duration];
+          document.getElementById("djbTicketCard").innerHTML = `
+      <span class="djb-ticket-badge">${t.badge}</span>
+      <div class="djb-ticket-name">${t.name}</div>
+      <div class="djb-ticket-price">$${t.price}<sup>/ pass</sup></div>
+      <ul class="djb-ticket-feat">${t.feats.map((f) => `<li>${f}</li>`).join("")}</ul>
+      <button class="djb-cta-solid">Reserve This Pass</button>
+    `;
+          document.getElementById("djbResultsWrap").style.display = "block";
+        }
+
+        genBtnEl.addEventListener("click", () => {
+          if (genBtnEl.disabled) return;
+          genBtnEl.disabled = true;
+          genBtnText.innerHTML =
+            '<span class="spinner-border spinner-border-sm me-2"></span>Assembling…';
+          setTimeout(() => {
+            render();
+            genBtnText.textContent = "Regenerate Schedule";
+            genBtnEl.disabled = false;
+            document
+              .getElementById("djbResultsWrap")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 700);
+        });
+      })();
+    </script>
+    <!-- END Ai Section -->
     <!-- Footer -->
     <footer class="footer">
       <div class="left-foot">

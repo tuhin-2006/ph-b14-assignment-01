@@ -1,0 +1,6 @@
+Imagine you are a senior Frontend Developer and UI/UX Designer with expertise in creating modern, interactive, and visually appealing web experiences. Design a modern, interactive, and dynamic landing page section for a developer conference called DevConf 2026. The section should allow users to choose their development interest (Frontend, Backend, AI, DevOps, etc.), experience level, and conference duration. After clicking a "Generate My Plan" button, dynamically display the most relevant conference sessions, recommended speakers, suitable ticket plan, and other related information based on the user's selections. The design should be visually engaging, user-friendly, and match a premium conference landing page. Use hover animations, smooth transitions, a responsive layout, glassmorphism effects, modern gradients, HTML, CSS, Bootstrap, and vanilla JavaScript. The code should be clean, well-structured, responsive, and easy to maintain.
+
+
+
+
+// এটা প্রম্প্ট দেয়ার পর আমি যে design পেয়েছি সেটা বসানোর পর সমস্যা হয়েছিল পরবর্তীতে নিজ এবং AI এর সহযোগিতায় সেগুলো ঠিক করেছি। আমি যেটা design করেছি সেটার জন্য শুধু এই প্রম্প্ট টি আমার জন্য যথেষ্ট ছিল না। লেআউট ভেঙে যাচ্ছিলো আমার design চেঞ্জ হয়ে যাচ্ছিলো। //

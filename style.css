@@ -108,11 +108,12 @@ ul li {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
-.speaker-card div {
-  background: #f3efef;
-  border-radius: 10px;
+.cnn1 {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  height: 500px;
 }
 .speaker-card img {
   object-fit: cover;
@@ -124,11 +125,11 @@ ul li {
   padding: 20px;
   height: 90px;
 }
-.text-item p {
+.passion {
   color: #1d4ed8;
 }
-.text-item p1 {
-  color: rgb(150, 143, 143);
+.role1 {
+  color: rgb(177, 157, 157);
 }
 
 /* Pricing Card  */
@@ -155,14 +156,14 @@ ul li {
   gap: 25px;
   flex-wrap: wrap;
 }
-.card {
+.plan-card {
   width: 340px;
   background: #fff;
   border: 1px solid #e4e7ec;
   border-radius: 12px;
   padding: 22px;
 }
-.card ul {
+.plan-card ul {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -173,18 +174,18 @@ ul li {
     color: #1e5be6;
   }
 }
-.card ul li {
+.plan-card ul li {
   font-size: 15px;
   font-weight: 400;
 }
-.pro button:hover {
+.pro1 button:hover {
   background: #a0a9bd;
 }
-.pro {
+.pro1 {
   background-color: black;
   color: white;
 }
-.pro ul li {
+.pro1 ul li {
   color: rgb(150, 143, 143);
 }
 .plan2 {
